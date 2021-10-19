@@ -4951,7 +4951,11 @@
           ]
         },
         {
+<<<<<<< HEAD
           "description": "t = Terminal",
+=======
+          "description": "t = vscode",
+>>>>>>> fetch_head
           "type": "basic",
           "from": {
             "key_code": "t",

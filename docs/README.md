@@ -2,7 +2,7 @@
 
 > *Make CapsLock Great Again!*
 >
-> [中文文档](docs/zh-cn/) | [EN DOCS](http://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
+> [中文文档](https://capslock.vonng.com/#/zh-cn/) | [EN DOCS](https://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
 >
 > [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
@@ -13,7 +13,7 @@
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
 
-![control-plane-0](docs/img/keyboard.jpg)
+![control-plane-0](img/keyboard.jpg)
 
 > [Control Plane](#control-planes) 0 Layout (There are 15 more!)
 
@@ -29,24 +29,24 @@
 * **MouseKey**: Manipulate mouse cursor and wheels with keyboard
 * **Cross-Platform**: MacOS and Windows. Light-Weight and portable
 
-![](docs/img/highlight.jpg)
+![](img/highlight.jpg)
 
 ------------------------
 
 
 ## Features
-- [Basic](#Basic)                 :  Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
-- [Navigation](#Navigation)       :  Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
-- [Deletion](#Deletion)           :  Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
-- [MouseKey](#MouseKey)           :  Maps keypad to fully functional mouse
-- [Window](#window-control)       :  Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet
-- [Application](#app-shortcuts)   :  Shortcuts for launching or switching frequently used applications
-- [Terminal](#terminal-control)   :  Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>
-- [Clipboard](#Clipboard)         :  Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.
-- [Shifter](#Shifter)             :  Turn some keys into common code symbols.
-- [Functional](#Functional)       :  Screenshtots. Fine-grained light/volume control. Take function keys' function back!
+ - [Basic](#Basic)                 :  Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**. 
+ - [Navigation](#Navigation)       :  Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc... 
+ - [Deletion](#Deletion)           :  Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move. 
+ - [MouseKey](#MouseKey)           :  Maps keypad to fully functional mouse                        
+ - [Window](#window-control)       :  Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet 
+ - [Application](#app-shortcuts)   :  Shortcuts for launching or switching frequently used applications 
+ - [Terminal](#terminal-control)   :  Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd> 
+ - [Clipboard](#Clipboard)         :  Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste. 
+ - [Shifter](#Shifter)             :  Turn some keys into common code symbols.                     
+ - [Functional](#Functional)       :  Screenshtots. Fine-grained light/volume control. Take function keys' function back! 
 
-![](docs/img/feature.jpg)
+![](img/feature.jpg)
 
 ------------------------
 
@@ -60,24 +60,24 @@ Capslock serves via    on MacOS
 1. Download
 
    Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
-
+   
    Following the wizard and grant required permissions (Settings - Security - Privacy)
 
 2. Enable
 
    Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
 
-   `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json`
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
 
    > #### Alternative Links
    > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
    > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * Or download [**capslock.json**](mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
+   > * Or download [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
 
    Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
 
-   You can now try moving cursor with ⇪ + h,j,k,l , And exploring more features below.
+   You can now try moving cursor with ⇪ + h,j,k,l , And exploring more features below.  
 
 
 
@@ -88,7 +88,7 @@ Capslock serves via    on MacOS
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![](docs/img/keyboard.jpg)
+![](img/keyboard.jpg)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
 
@@ -336,10 +336,10 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 ## Version
 
-* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (The Latest version)
-* [**Capslock Mac V2**](mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](mac_v1): 2015 - 2017
-* [**Capslock Win**](win): 2013 - 2015
+* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/master/mac_v3/): 2021.03 - now (The Latest version)
+* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/master/mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/master/mac_v1): 2015 - 2017
+* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/master/win): 2013 - 2015
 
 |                       MacOS Supported                        |       Win Supported        |
 | :----------------------------------------------------------: | :------------------------: |
@@ -352,7 +352,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 MacOS v3 is actively maintained, available on MacOS 10.11 - 11.x. Yosemite (10.10) or lower are supported via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1)
 
-Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually
+Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually   
 
 
 ------------------------
@@ -387,7 +387,7 @@ Windows version is already archived. You can use [pre-compiled binary](https://g
 
 **Q: How can I customize it to my needs?**
 
-**A**: Just fork this repo and make modification to `mac_v3/capslock.json` according to [documentation](https://karabiner-elements.pqrs.org/docs/)
+**A**: Just fork this repo and make modification to `mac_v3/capslock.json` according to [documentation](https://karabiner-elements.pqrs.org/docs/) 
 You can edit the more human-readable format `mac_v3/capslock.yml` then compile it into `capslock.json` format with `make compile`.
 
 **Q: Is this original?**
@@ -399,15 +399,15 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 
 ## Feedbacks
 
-![](docs/img/feedback.jpg)
+![](img/feedback.jpg)
 
 
 ------------------------
 
 ## About
 
-Author： [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
+Author: [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
-License: [Apache 2.0 License](LICENSE)
+License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
 
 Beian: [浙ICP备15016890-3号](https://beian.miit.gov.cn/)
