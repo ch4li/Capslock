@@ -13,6 +13,154 @@ repo: https://github.com/Vonng/Capslock
 
 rules:
 
+
+  ################################################################
+  #                    Semicolon to Hyper                        #
+  ################################################################
+  - description: Semicolon to Hyper
+    manipulators:
+
+      - description: 'semicolon = ;(click) | hyper(hold)'
+        type: basic
+        from: { key_code: semicolon, modifiers: { optional: [ any ] } }
+        # map holding semicolon to a complex space which can be used again
+        # capslock outside, aims to remain English Punctuation
+        to: [ { key_code: fn, modifiers: [ right_command,right_control,right_option ] } ]
+        to_if_alone: [ { key_code: semicolon } ]
+
+      - description: '; + space = enter'
+        type: basic
+        from: { key_code: spacebar , modifiers: { mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: return_or_enter } ]
+
+      - description: '; + a = *'
+        type: basic
+        from: { key_code: a , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: '8' , modifiers: [ left_shift ] }]
+
+      - description: '; + i = :'
+        type: basic
+        from: { key_code: i , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: semicolon, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + q = ('
+        type: basic
+        from: { key_code: q , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '9' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + c = .'
+        type: basic
+        from: { key_code: c , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: period }, {"key_code": "caps_lock"} ]
+
+      - description: '; + u = $'
+        type: basic
+        from: { key_code: u , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '4' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + e = ^'
+        type: basic
+        from: { key_code: e , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '6' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + d = ='
+        type: basic
+        from: { key_code: d , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: equal_sign }, {"key_code": "caps_lock"} ]
+
+      - description: '; + s = <'
+        type: basic
+        from: { key_code: s , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: comma, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + f = >'
+        type: basic
+        from: { key_code: f , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: period, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + r = &'
+        type: basic
+        from: { key_code: r , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '7' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + v = |'
+        type: basic
+        from: { key_code: v , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: backslash, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + g = {!}'
+        type: basic
+        from: { key_code: g , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '1' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + y = @'
+        type: basic
+        from: { key_code: y , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '2' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + x = _'
+        type: basic
+        from: { key_code: x , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: hyphen, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + h = `%'
+        type: basic
+        from: { key_code: h , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: '5' , modifiers: [ left_shift ] }]
+
+      - description: '; + b = {'
+        type: basic
+        from: { key_code: b , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: open_bracket, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + j = {text}`;'
+        type: basic
+        from: { key_code: j , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: semicolon }, {"key_code": "caps_lock"} ]
+
+      - description: '; + k = ``'
+        type: basic
+        from: { key_code: k , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: grave_accent_and_tilde }, {"key_code": "caps_lock"} ]
+
+      - description: '; + l = `"'
+        type: basic
+        from: { key_code: l , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: quote, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + w = {#}'
+        type: basic
+        from: { key_code: w , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: '3' , modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + n = {+}'
+        type: basic
+        from: { key_code: n , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: equal_sign, modifiers: [ left_shift ] }, {"key_code": "caps_lock"} ]
+
+      - description: '; + m = -'
+        type: basic
+        from: { key_code: m , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ {"key_code": "caps_lock"}, { key_code: hyphen }, {"key_code": "caps_lock"} ]
+
+      - description: '; + t = {space 4}'
+        type: basic
+        from: { key_code: t , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: spacebar }, { key_code: spacebar }, { key_code: spacebar }, { key_code: spacebar } ]
+
+      - description: '; + z = ⌘ z'
+        type: basic
+        from: { key_code: z , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: z, modifiers: [ left_command ] } ]
+
+      - description: '; + o = switch languge '
+        type: basic
+        from: { key_code: o , modifiers: {  mandatory: [ right_command,right_control,fn,right_option ] } }
+        to: [ { key_code: spacebar, modifiers: [ left_control ] } ]
+
+
+
+
   ################################################################
   #                    Capslock to Esc/Hyper                     #
   ################################################################
@@ -1252,115 +1400,131 @@ rules:
   - description: Hyper Application
     manipulators:
 
+      #==========================================================#
+      # ( e ) --> notion / xmind / onenote
+      #==========================================================#
+      - description: 'command + e = XMind'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a XMind }]
+        
+      - description: 'option + e = Finder'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a finder}]
+        
+      - description: 'e = Notion'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Notion }]
 
       #==========================================================#
-      # ( e ) --> safari / finder / mail                         #
+      # ( r ) --> idea
       #==========================================================#
-      - description: 'command + e = finder'
+      - description: 'command + r = lambda'
         type: basic
-        from: { key_code: e, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a finder } ]
-
-      - description: 'option + e = mail'
+        from: { key_code: r, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a lambda }]
+        
+      - description: 'option + r = lambda'
         type: basic
-        from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a mail } ]
-
-      - description: 'e = safari'
+        from: { key_code: r, modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a lambda }]
+        
+      - description: 'r = IntelliJ IDEA'
         type: basic
-        from: { key_code: e, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Safari } ]
-
-
-      #==========================================================#
-      # ( r ) --> iterm / preview / terminal                     #
-      #==========================================================#
-      - description: 'command + r = preview'
-        type: basic
-        from: { key_code: r, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Preview } ]
-
-      - description: 'option + r = terminal'
-        type: basic
-        from: { key_code: r, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a terminal } ]
-
-      - description: 'r = iTerm2'
-        type: basic
-        from: { key_code: r, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a iTerm } ]
+        from: { key_code: r, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a 'IntelliJ IDEA' }]
 
       #==========================================================#
-      # ( t ) --> vscode / typora / notes                        #
+      # ( t ) --> terminal / lambda / finder
       #==========================================================#
-      - description: 'command + t = typora'
+      - description: 'command + t = Terminal '
         type: basic
-        from: { key_code: t, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Typora } ]
-
-      - description: 'option + t = notes'
+        from: { key_code: t, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Terminal }]
+        
+      - description: 'option + t = lambda'
         type: basic
-        from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a notes } ]
-
-      - description: 't = vscode'
+        from: { key_code: t, modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a lambda }]
+        
+      - description: 't = Visual Studio Code'
         type: basic
-        from: { key_code: t, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Visual Studio Code' } ]
+        from: { key_code: t, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a 'Visual Studio Code' }]
 
       #==========================================================#
-      # ( y ) --> siri / karabiner / amphetamine                 #
+      # ( y ) --> preview / karabiner /                          #
       #==========================================================#
-      - description: 'command + y = karabiner'
+      - description: 'command + y = Keyboard.prefPane'
         type: basic
-        from: { key_code: y, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Karabiner-Elements } ]
-
-      - description: 'option + y = amphetamine'
+        from: { key_code: 'y', modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open '/System/Library/PreferencePanes/Keyboard.prefPane' }]
+        
+      - description: 'option + y = karabiner'
         type: basic
-        from: { key_code: y, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a amphetamine } ]
-
-      - description: 'y = Siri'
+        from: { key_code: 'y', modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Karabiner-Elements}]
+        
+      - description: 'y = Preview'
         type: basic
-        from: { key_code: y, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Siri } ]
+        from: { key_code: 'y', modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Preview }]
 
       #==========================================================#
       # ( f ) --> alfred 4 / Dash / Dictionary                   #
       #==========================================================#
       - description: 'command + f = Dash'
         type: basic
-        from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Dash } ]
-
+        from: { key_code: f, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Dash }]
+        
       - description: 'option + f = Dictionary'
         type: basic
-        from: { key_code: f, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Dictionary } ]
-
+        from: { key_code: f, modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a Dictionary }]
+        
       - description: 'f = Alfred 4'
         type: basic
-        from: { key_code: f, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Alfred 4' } ]
+        from: { key_code: f, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a 'Alfred 4' }]
 
       #==========================================================#
-      # ( g ) --> idea / chrome / calender                       #
+      # ( g ) --> chrome / safari / mail
       #==========================================================#
-      - description: 'command + g = Chrome'
+      - description: 'command + g = Safari'
         type: basic
-        from: { key_code: g, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Google Chrome' } ]
+        from: { key_code: g, modifiers: { mandatory: [ left_command, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a 'Safari' }]
+        
+      - description: 'option + g = lambda'
+        type: basic
+        from: { key_code: g, modifiers: { mandatory: [ left_option, right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a lambda }]
+        
+      - description: 'g = Google Chrome'
+        type: basic
+        from: { key_code: g, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a 'Google Chrome'}] 
 
-      - description: 'option + g = Calender'
+      #==========================================================#
+      # ( v ) -->  vscode
+      #==========================================================#
+      # - description: 'v = vim meta key'
+      - description: 'v = lambda'
         type: basic
-        from: { key_code: g, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Calendar } ]
+        from: { key_code: v, modifiers: { mandatory: [ right_command, right_control, right_shift, right_option ]}}
+        to: [{ shell_command: open -a lambda}]
 
-      - description: 'g = Intellij IDEA'
+      #==========================================================#
+      # ( b ) -->  Tmux Prefix Meta Key                          #
+      #==========================================================#
+      # - description: 'b = tmux meta key'
+      - description: 'b = ctrl-b'
         type: basic
-        from: { key_code: g, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'IntelliJ IDEA' } ]
+        from: { key_code: b, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: b , modifiers: [ left_control ] } ]
 
 
 
@@ -1423,24 +1587,6 @@ rules:
         from: { key_code: c, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: c , modifiers: [ left_control ] } ]
 
-      #==========================================================#
-      # ( v ) -->  Vim Prefix Meta Key                           #
-      #==========================================================#
-      # - description: 'v = vim meta key'
-      - description: 'v = ctrl-v'
-        type: basic
-        from: { key_code: v, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: v , modifiers: [ left_control ] } ]
-
-
-      #==========================================================#
-      # ( b ) -->  Tmux Prefix Meta Key                          #
-      #==========================================================#
-      # - description: 'b = tmux meta key'
-      - description: 'b = ctrl-b'
-        type: basic
-        from: { key_code: b, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: b , modifiers: [ left_control ] } ]
 
 
 
